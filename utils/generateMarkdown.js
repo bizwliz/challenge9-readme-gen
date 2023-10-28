@@ -14,6 +14,43 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderLicenseBadge(data)}
+
+  ## Description
+  ${data.description}
+
+  ## Table of Contents (Optional)
+  
+  If your README is long, add a table of contents to make it easy for users to find what they need.
+  
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contribution](#contribution)
+  - [Test](#test)
+  - [Questions](#questions)
+  
+  ## Installation
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## License
+  ${renderLicenseSection(data)}
+
+  ## Contibution 
+  ${data.contribution}
+
+  ## Test
+  ${data.test}
+
+  ## Questions
+  <ul>
+    <li><a href="https://github.com/${data.username}">GitHub Profile</a></li>
+    <li><a href="malito:${data.email}">Email Me</a></li>
+  </ul>
 `;
 }
 
