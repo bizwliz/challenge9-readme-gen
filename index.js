@@ -1,4 +1,3 @@
-// TODO: Include packages needed for this application
 const generateMarkdown=require("./utils/generateMarkdown")
 const fs=require("fs")
 const inquirer=require("inquirer")
@@ -10,7 +9,7 @@ const questions = [
         name: "title",
     },
     {
-        type: "input",
+        type: "editor",
         message: "What is the project description?",
         name: "description",
     },
@@ -31,13 +30,13 @@ const questions = [
         name: "email",
     },
     {
-        type:  "input",
+        type:  "editor",
         message: "What are the steps required to install your project?",
         name: "installation",
     },
     {
-        type:  "input",
-        message: "Provide instructions and examples for use. Include screenshots as needed",
+        type:  "editor",
+        message: "Provide instructions and examples for use.",
         name: "usage",
     },
     {
@@ -67,5 +66,4 @@ function init() {
         });
 }
 
-// Function call to initialize app
 init();
