@@ -24,7 +24,7 @@ In this challenge, I will be creating a README Generator using Node. The termina
 
 ## Usage
 <p>Link to github: <a href="https://github.com/bizwliz/challenge9-readme-gen">Challenge 9 Github</a></p>
-<p>Video Demonstration: <a href=""><img src="./images/screenshot.png"></a></p>
+<p>Video Demonstration: <a href="https://watch.screencastify.com/v/VuzsixknroeThS8Ntt11"><img src="./images/screenshot.png"></a></p>
 
 ## License
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
