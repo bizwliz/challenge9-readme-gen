@@ -9,7 +9,7 @@ const questions = [
         name: "title",
     },
     {
-        type: "editor",
+        type: "input",
         message: "What is the project description?",
         name: "description",
     },
@@ -30,12 +30,12 @@ const questions = [
         name: "email",
     },
     {
-        type:  "editor",
+        type:  "input",
         message: "What are the steps required to install your project?",
         name: "installation",
     },
     {
-        type:  "editor",
+        type:  "input",
         message: "Provide instructions and examples for use.",
         name: "usage",
     },
