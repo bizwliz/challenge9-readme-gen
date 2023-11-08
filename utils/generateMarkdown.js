@@ -1,23 +1,29 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if(license==="MIT"){
-    return ` [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
-  }
-  else if(license==="No License"){
-    return ` [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+  if (license === "MIT") {
+    return ` [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+  } else if (license === "No License") {
+    return ` [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
+  } else {
+    return "";
   }
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  // You need to define the appropriate license link here based on the selected license
+  // For example, you can return a link to the license text or documentation.
+  return "";
+}
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(license==="MIT"){
-    return `THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
+  if (license === "MIT") {
+    return `This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).`;
+  } else if (license === "No License") {
+    return "This project is not licensed.";
+  } else {
+    return "";
   }
 }
 
@@ -29,11 +35,9 @@ function generateMarkdown(data) {
 
   ## Description
   ${data.description}
+  
+  ## Table of Contents
 
-  ## Table of Contents (Optional)
-  
-  If your README is long, add a table of contents to make it easy for users to find what they need.
-  
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -41,7 +45,7 @@ function generateMarkdown(data) {
   - [Contribution](#contribution)
   - [Test](#test)
   - [Questions](#questions)
-  
+
   ## Installation
   ${data.installation}
 
@@ -50,18 +54,17 @@ function generateMarkdown(data) {
 
   ## License
   ${renderLicenseSection(data.license)}
+  ${renderLicenseLink(data.license)}
 
-  ## Contibution 
+  ## Contribution
   ${data.contribution}
 
   ## Test
   ${data.test}
 
   ## Questions
-  <ul>
-    <li><a href="https://github.com/${data.username}">GitHub Profile</a></li>
-    <li><a href="malito:${data.email}">Email Me</a></li>
-  </ul>
+  - [GitHub Profile](https://github.com/${data.username})
+  - [Email Me](mailto:${data.email})
 `;
 }
 
